@@ -1,0 +1,117 @@
+.card {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 230px;
+  height: 345px;
+  border: 2px solid rgba(71, 72, 72, 0.2);
+}
+
+.card img {
+  height: 230px;
+  width: 215px;
+}
+
+.card h3 {
+  margin-top: 10px;
+}
+
+.card h3:hover {
+  color: rgb(141, 141, 141) !important;
+}
+
+.card h4 {
+  margin: 10px 0 20px 0;
+  font-weight: 400;
+}
+
+.card-grid {
+  display: grid;
+  width: 100%;
+  justify-self: center;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 30px;
+  height: auto;
+  flex-wrap: wrap;
+  padding: 40px 450px 20px 450px;
+}
+
+.dark-theme .card {
+  border: 2px solid rgba(216, 216, 216, 0.2);
+}
+
+.dark-theme .card h1,
+.dark-theme .card h3,
+.dark-theme .card h4 {
+  color: white;
+  text-align: center;
+}
+
+.light-theme .card h1,
+.light-theme .card h3,
+.light-theme .card h4 {
+  color: black;
+  text-align: center;
+}
+
+.card:hover {
+  border: 2.01px solid rgb(141, 141, 141);
+}
+
+.favButton {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: transparent;
+  color: white;
+  padding: 0;
+  border: 1px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.favButton--active .favIcon {
+  color: red;
+  animation: heartbeat 1s;
+  filter: none;
+}
+
+.favButton--active .favIcon:before {
+  animation: none;
+}
+
+.favButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.favButton:hover::before {
+  opacity: 1;
+}
+
+.favIcon {
+  font-size: 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

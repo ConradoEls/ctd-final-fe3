@@ -1,0 +1,28 @@
+.footer-container {
+  height: 120px;
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  width: 300px;
+  margin-left: 260px;
+}
+.red {
+  width: 30px;
+  margin-right: 20px;
+}
+
+.container-red{
+  margin-right: 80px;
+}
+
+.dark-theme .logo {
+  filter: invert(100%);
+}
+
+.light-theme .red {
+  filter: invert(100%);
+}
